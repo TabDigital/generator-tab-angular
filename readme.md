@@ -5,9 +5,9 @@
 
 ## Usage
 
-Install `generator-angular`:
+Install `generator-tab-angular`:
 ```
-npm install -g generator-angular
+npm install -g git+ssh://git@github.com:TabDigital/generator-tab-angular.git 
 ```
 
 Make a new directory, and `cd` into it:
@@ -15,9 +15,9 @@ Make a new directory, and `cd` into it:
 mkdir my-new-project && cd $_
 ```
 
-Run `yo angular`, optionally passing an app name:
+Run `yo tab-angular`, optionally passing an app name:
 ```
-yo angular [app-name]
+yo tab-angular [app-name]
 ```
 
 Run `grunt` for building and `grunt serve` for preview
@@ -27,18 +27,18 @@ Run `grunt` for building and `grunt serve` for preview
 
 Available generators:
 
-* [angular](#app) (aka [angular:app](#app))
-* [angular:controller](#controller)
-* [angular:directive](#directive)
-* [angular:filter](#filter)
-* [angular:route](#route)
-* [angular:service](#service)
-* [angular:provider](#service)
-* [angular:factory](#service)
-* [angular:value](#service)
-* [angular:constant](#service)
-* [angular:decorator](#decorator)
-* [angular:view](#view)
+* [tab-angular](#app) (aka [tab-angular:app](#app))
+* [tab-angular:controller](#controller)
+* [tab-angular:directive](#directive)
+* [tab-angular:filter](#filter)
+* [tab-angular:route](#route)
+* [tab-angular:service](#service)
+* [tab-angular:provider](#service)
+* [tab-angular:factory](#service)
+* [tab-angular:value](#service)
+* [tab-angular:constant](#service)
+* [tab-angular:decorator](#decorator)
+* [tab-angular:view](#view)
 
 **Note: Generators are to be run from the root directory of your app.**
 
@@ -47,7 +47,7 @@ Sets up a new AngularJS app, generating all the boilerplate you need to get star
 
 Example:
 ```bash
-yo angular
+yo tab-angular
 ```
 
 ### Route
@@ -55,7 +55,7 @@ Generates a controller and view, and configures a route in `app/scripts/app.js` 
 
 Example:
 ```bash
-yo angular:route myroute
+yo tab-angular:route myroute
 ```
 
 Produces `app/scripts/controllers/myroute.js`:
@@ -74,7 +74,7 @@ Produces `app/views/myroute.html`:
 
 Example: 
 ```bash
-yo angular:route myRoute --uri=my/route
+yo tab-angular:route myRoute --uri=my/route
 ```
 
 Produces controller and view as above and adds a route to `app/scripts/app.js`
@@ -85,7 +85,7 @@ Generates a controller in `app/scripts/controllers`.
 
 Example:
 ```bash
-yo angular:controller user
+yo tab-angular:controller user
 ```
 
 Produces `app/scripts/controllers/user.js`:
@@ -99,7 +99,7 @@ Generates a directive in `app/scripts/directives`.
 
 Example:
 ```bash
-yo angular:directive myDirective
+yo tab-angular:directive myDirective
 ```
 
 Produces `app/scripts/directives/myDirective.js`:
@@ -120,7 +120,7 @@ Generates a filter in `app/scripts/filters`.
 
 Example:
 ```bash
-yo angular:filter myFilter
+yo tab-angular:filter myFilter
 ```
 
 Produces `app/scripts/filters/myFilter.js`:
@@ -137,7 +137,7 @@ Generates an HTML view file in `app/views`.
 
 Example:
 ```bash
-yo angular:view user
+yo tab-angular:view user
 ```
 
 Produces `app/views/user.html`:
@@ -150,7 +150,7 @@ Generates an AngularJS service.
 
 Example:
 ```bash
-yo angular:service myService
+yo tab-angular:service myService
 ```
 
 Produces `app/scripts/services/myService.js`:
@@ -160,14 +160,14 @@ angular.module('myMod').service('myService', function () {
 });
 ```
 
-You can also do `yo angular:factory`, `yo angular:provider`, `yo angular:value`, and `yo angular:constant` for other types of services.
+You can also do `yo tab-angular:factory`, `yo tab-angular:provider`, `yo tab-angular:value`, and `yo tab-angular:constant` for other types of services.
 
 ### Decorator
 Generates an AngularJS service decorator.
 
 Example:
 ```bash
-yo angular:decorator serviceName
+yo tab-angular:decorator serviceName
 ```
 
 Produces `app/scripts/decorators/serviceNameDecorator.js`:
@@ -188,7 +188,7 @@ For generators that output scripts, the `--coffee` option will output CoffeeScri
 
 For example:
 ```bash
-yo angular:controller user --coffee
+yo tab-angular:controller user --coffee
 ```
 
 Produces `app/scripts/controller/user.coffee`:

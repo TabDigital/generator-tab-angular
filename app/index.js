@@ -46,15 +46,15 @@ var Generator = module.exports = function Generator(args, options) {
     this.env.options.coffee = this.options.coffee;
   }
 
-  this.hookFor('angular:common', {
+  this.hookFor('tab-angular:common', {
     args: args
   });
 
-  this.hookFor('angular:main', {
+  this.hookFor('tab-angular:main', {
     args: args
   });
 
-  this.hookFor('angular:controller', {
+  this.hookFor('tab-angular:controller', {
     args: args
   });
 
