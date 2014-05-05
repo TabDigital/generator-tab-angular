@@ -1,7 +1,7 @@
 {
-  "name": "generator-angular",
+  "name": "generator-tab-angular",
   "version": "0.8.0",
-  "description": "Yeoman generator for AngularJS",
+  "description": "Yeoman generator for TAB-style AngularJS",
   "keywords": [
     "yeoman-generator",
     "scaffold",
@@ -11,7 +11,7 @@
     "app",
     "angular"
   ],
-  "author": "The Yeoman Team",
+  "author": "The Yeoman Team and TabCorp developers",
   "main": "app/index.js",
   "repository": "yeoman/generator-angular",
   "scripts": {
