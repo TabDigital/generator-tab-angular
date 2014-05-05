@@ -1,17 +1,14 @@
-'use strict'
 
-describe 'Controller: <%= classedName %>Ctrl', ->
+describe 'Controller: <%= classedName %>Controller', ->
 
-  # load the controller's module
   beforeEach module '<%= scriptAppName %>'
 
-  <%= classedName %>Ctrl = {}
+  <%= classedName %>Controller = {}
   scope = {}
 
-  # Initialize the controller and a mock scope
   beforeEach inject ($controller, $rootScope) ->
     scope = $rootScope.$new()
-    <%= classedName %>Ctrl = $controller '<%= classedName %>Ctrl', {
+    <%= classedName %>Ctrl = $controller '<%= classedName %>Controller', {
       $scope: scope
     }
 

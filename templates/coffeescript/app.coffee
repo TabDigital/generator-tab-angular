@@ -1,12 +1,13 @@
-'use strict'
 
 angular
-  .module('<%= scriptAppName %>', [<%= angularModules %>])<% if (ngRoute) { %>
+  .module('<%= scriptAppName %>', [<%= angularModules %>])
+
+<% if (ngRoute) { %>
   .config ($routeProvider) ->
     $routeProvider
       .when '/',
         templateUrl: 'views/main.html'
-        controller: 'MainCtrl'
+        controller: 'MainController'
       .otherwise
         redirectTo: '/'
 <% } %>
