@@ -32,7 +32,7 @@ var Generator = module.exports = function Generator() {
     this.env.options.testPath = this.env.options.testPath || 'test/spec';
   }
 
-  sourceRoot = '/templates/coffeescript';
+  var sourceRoot = '/templates/coffeescript';
   this.scriptSuffix = '.coffee';
 
   this.sourceRoot(path.join(__dirname, sourceRoot));
@@ -84,7 +84,7 @@ Generator.prototype.generateSourceAndTest = function (appTemplate, testTemplate,
   }
 
   this.appTemplate(appTemplate, path.join('scripts', targetDirectory, this.name + '.' + appTemplate));
-  this.testTemplate(testTemplate, path.join(targetDirectory, this.name));
+  this.testTemplate(testTemplate, path.join(targetDirectory, this.name + '.' + appTemplate + '.spec'));
   if (!skipAdd) {
     this.addScriptToIndex(path.join(targetDirectory, this.name));
   }
