@@ -32,27 +32,8 @@ var Generator = module.exports = function Generator() {
     this.env.options.testPath = this.env.options.testPath || 'test/spec';
   }
 
-  this.env.options.coffee = this.options.coffee;
-  if (typeof this.env.options.coffee === 'undefined') {
-    this.option('coffee');
-
-    // attempt to detect if user is using CS or not
-    // if cml arg provided, use that; else look for the existence of cs
-    if (!this.options.coffee &&
-      this.expandFiles(path.join(this.env.options.appPath, '/scripts/**/*.coffee'), {}).length > 0) {
-      this.options.coffee = true;
-    }
-
-    this.env.options.coffee = this.options.coffee;
-  }
-
-  var sourceRoot = '/templates/javascript';
-  this.scriptSuffix = '.js';
-
-  if (this.env.options.coffee) {
-    sourceRoot = '/templates/coffeescript';
-    this.scriptSuffix = '.coffee';
-  }
+  sourceRoot = '/templates/coffeescript';
+  this.scriptSuffix = '.coffee';
 
   this.sourceRoot(path.join(__dirname, sourceRoot));
 };
@@ -102,7 +83,7 @@ Generator.prototype.generateSourceAndTest = function (appTemplate, testTemplate,
     this.cameledName = this.classedName;
   }
 
-  this.appTemplate(appTemplate, path.join('scripts', targetDirectory, this.name));
+  this.appTemplate(appTemplate, path.join('scripts', targetDirectory, "#{this.name}.#{appTemplate}));
   this.testTemplate(testTemplate, path.join(targetDirectory, this.name));
   if (!skipAdd) {
     this.addScriptToIndex(path.join(targetDirectory, this.name));
