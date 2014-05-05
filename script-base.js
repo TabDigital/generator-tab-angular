@@ -83,7 +83,7 @@ Generator.prototype.generateSourceAndTest = function (appTemplate, testTemplate,
     this.cameledName = this.classedName;
   }
 
-  this.appTemplate(appTemplate, path.join('scripts', targetDirectory, "#{this.name}.#{appTemplate}));
+  this.appTemplate(appTemplate, path.join('scripts', targetDirectory, this.name + '.' + appTemplate));
   this.testTemplate(testTemplate, path.join(targetDirectory, this.name));
   if (!skipAdd) {
     this.addScriptToIndex(path.join(targetDirectory, this.name));
