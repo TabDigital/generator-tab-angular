@@ -184,12 +184,11 @@ angular.module('myMod').config(function ($provide) {
 In general, these options can be applied to any generator, though they only affect generators that produce scripts.
 
 ### CoffeeScript
+
+Coffeescript is the only supported filetype for the tab-angular generators.
+
 For generators that output scripts, the `--coffee` option will output CoffeeScript instead of JavaScript.
 
-For example:
-```bash
-yo tab-angular:controller user --coffee
-```
 
 Produces `app/scripts/controller/user.coffee`:
 ```coffeescript
