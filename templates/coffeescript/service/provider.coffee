@@ -1,21 +1,17 @@
-'use strict'
 
 angular.module('<%= scriptAppName %>')
-  .provider '<%= cameledName %>', [->
 
-    # Private variables
-    salutation = 'Hello'
+.provider '<%= cameledName %>', [->
 
-    # Private constructor
-    class Greeter
-      @greet = ->
-        salutation
+  salutation = 'Hello'
 
-    # Public API for configuration
-    @setSalutation = (s) ->
-      salutation = s
+  class Greeter
+    @greet = ->
+      salutation
 
-    # Method for instantiating
-    @$get = ->
-      new Greeter()
-  ]
+  @setSalutation = (s) ->
+    salutation = s
+
+  @$get = ->
+    new Greeter()
+]
